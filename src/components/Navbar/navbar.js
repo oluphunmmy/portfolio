@@ -1,38 +1,40 @@
 import React, { useState } from 'react';
 import './navbar.css';
 import logo from '../../assets/logo.png';
-import contactme from '../../assets/contact.png';
-import {Link} from 'react-scroll';
-import Menu from '../../assets/menu.png';
+import AnchorLink from 'react-anchor-link-smooth-scroll';
+import underline from '../../assets/nav_underline.svg';
 
 const Navbar = () => {
-    const [showMenu, setShowMenu] = useState(false);
-    return (
-        <nav className='navbar'>
-            <img src={logo} alt='Logo' className='logo'/>
-            <div className="desktopMenu">
-                <Link activeClass='active' to='intro' spy={true} smooth={true} offset={-100} duration={500} className="desktopMenulistItem">Home</Link>
-                <Link activeClass='active' to='skills' spy={true} smooth={true} offset={-50} duration={500} className="desktopMenulistItem" >About</Link>
-                <Link activeClass='active' to='works' spy={true} smooth={true} offset={-50} duration={500} className="desktopMenulistItem" >Portfolio</Link>
-                <Link activeClass='active' to='clients' spy={true} smooth={true} offset={-70} duration={500} className="desktopMenulistItem">Clients</Link>
-                
-            </div>
-            <button className='desktopMenuBtn' onClick={() => {
-                document.getElementById('contact').scrollIntoView({behavior: 'smooth'});
-            }}>
-                <img src={contactme} alt='Contactme' className='desktopMenuimg'/> Contact Me
-            </button>
+    const [menu, setMenu] = useState("home");
 
-            <img src={Menu} alt='Menu' className='mobMenu' onClick={()=>setShowMenu(!showMenu)}/>
-            <div className="navmenu" style={{display: showMenu? 'flex': 'none'}}>
-                <Link activeClass='active' to='intro' spy={true} smooth={true} offset={-100} duration={500} className="listItem" onClick={()=>setShowMenu(false)}>Home</Link>
-                <Link activeClass='active' to='skills' spy={true} smooth={true} offset={-50} duration={500} className="listItem" onClick={()=>setShowMenu(false)}>About</Link>
-                <Link activeClass='active' to='works' spy={true} smooth={true} offset={-50} duration={500} className="listItem" onClick={()=>setShowMenu(false)}>Portfolio</Link>
-                <Link activeClass='active' to='clients' spy={true} smooth={true} offset={-70} duration={500} className="listItem" onClick={()=>setShowMenu(false)}>Clients</Link>
-                <Link activeClass='active' to='contact' spy={true} smooth={true} offset={-100} duration={500} className="listItem" onClick={()=>setShowMenu(false)}>Contact</Link>
-            </div>
-        </nav>
+    return (
+        <div className='navbar'>
+            <img src={logo} alt='Logo' className='logo'/>
+            <ul className='nav-menu'>
+                <li><AnchorLink className='anchor-link' href='#home'> <p onClick={() => setMenu('home')}>
+                    Home</p></AnchorLink>
+                    {menu === 'home' && <img src={underline} alt='' />}
+                </li>
+                <li><AnchorLink className='anchor-link' offset={70} href='#about'><p onClick={() => setMenu('about')}>
+                    About Me</p></AnchorLink>
+                    {menu === 'about' && <img src={underline} alt='' />}
+                </li>
+                <li><AnchorLink className='anchor-link' offset={80} href='#skills'><p onClick={() => setMenu('skills')}>
+                    Services</p></AnchorLink>
+                    {menu === 'services' && <img src={underline} alt='' />}
+                </li>
+                <li><AnchorLink className='anchor-link' offset={50} href='#portfolio'><p onClick={() => setMenu('portfolio')}>
+                    Portfolio</p></AnchorLink>
+                    {menu === 'portfolio' && <img src={underline} alt='' />}
+                </li>
+                <li><AnchorLink className='anchor-link' offset={355} href='#contact'><p onClick={() => setMenu('contact')}>
+                    Contact Me</p></AnchorLink>
+                    {menu === 'contact' && <img src={underline} alt='' />}
+                </li>
+            </ul>
+            <div className='nav-connect'><AnchorLink className='anchor-link' offset={355} href='#contact'>Connect With Me</AnchorLink></div>
+        </div>
     );
 }
 
-export default Navbar
+export default Navbar;

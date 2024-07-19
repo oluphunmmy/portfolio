@@ -1,42 +1,64 @@
-#contactPage{
+ #contactPage{
     min-height: calc(100vh - 4rem);
     width: 100vw;
     max-width: 60rem;
-    margin: 0 auto;
+    margin: auto;
+    padding: 5rem 2rem;
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;  
-}
-.contactPageTitle {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-}
-.clientDesc{
-    font-weight: 300;
-    font-size: 1.5rem;
-}
-.clientImgs{
-    margin: 1rem 0;
-    display: flex;
-    flex-wrap: wrap;
-}
-.clientImg{
-    object-fit: cover;
-    width: 23%;
-    min-width: 9rem;
+} 
+.container.contact__container {
+    width: 70%;
+    display: grid;
+    grid-template-columns: 45% 45%;
+    gap: 12%;
     margin: auto;
-    padding: 0.25rem;
+} 
+
+.contact__options {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.2rem;
 }
-#clients{
-    padding: 2rem;
+
+.contact__option {
+    background: var(--color-primary-variant);
+    padding: 1.2rem;
+    border-radius: 1.2rem;
+    text-align: center;
+    border: 1px solid transparent;
+    transition: var(--transition);
 }
-.contactDesc{
-    padding: 1rem;
-    font-size:large;
-    font-weight: 300;
+
+.contact__option:hover {
+    background: transparent;
+    border-color: var(--color-bg-variant);
+    cursor: 
 }
+
+.contact__option-icon {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.contact__option a {
+    margin-top: 0.7rem;
+    display: inline-block;
+    font-size: 0.8rem;
+}
+
+.contact__option h5 {
+    color: var(--color-light);
+}
+
+.contact__option h4 {
+    font-weight: 500;
+}
+
 .contactForm{
     margin: 1rem;
     display: flex;
@@ -65,7 +87,7 @@
     padding: 0.75rem 3.5rem;
     font-size: 1rem;
 }
-.links{
+/* .links{
     display: flex;
     flex-wrap: wrap;
 }
@@ -74,4 +96,17 @@
     height: 3rem;
     width: 3rem;
     margin: 0 0.75rem;
+} */
+
+@media screen and (max-width: 1024px){
+    .container.contact__container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+}
+  
+@media screen and (max-width: 600px){
+    .container.contact__container {
+        width: var(--container-width-sm);
+    }
 }

@@ -1,9 +1,7 @@
 .navbar {
     height: 5rem;
-    width: 100vw;
+    width: 100%;
     background-color: rgb(30, 30, 30);
-    max-width: 75rem;
-    margin: 0, auto;
     padding: 1rem 2rem;
     display: flex;
     align-items: center;
@@ -11,85 +9,76 @@
     position: sticky;
     top: 0;
     z-index: 3;
+    max-width: 100vw;
+    box-sizing: border-box;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 40px;
+    font-size: 15px;
+}
+
+.nav-menu li {
+    position: relative;
+    padding-bottom: 15px; /* Add padding to create space for the underline */
+}
+
+.nav-menu p {
+    margin: 0;
+    cursor: pointer;
+}
+
+.nav-menu img {
+    position: absolute;
+    bottom: 0; /* Place the underline at the bottom of the li element */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%; /* Ensure it covers the width of the text */
+}
+.nav-menu  li img {
+    display: flex;
+    margin: auto;
+}
+
+.anchor-link{
+    text-decoration: none;
+    color: white;
+}
+
+.nav-connect {
+    padding: 10px 20px;
+    border-radius: 50px;
+    background: linear-gradient(267deg, #DA7C25 0.36%, #B923E1 102.06%);
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.5s;
+    color: white;
+}
+
+.nav-connect:hover {
+    transform: scale(1.05);
 }
 
 .logo {
-    object-fit: cover;
-    height: 3rem;
-    height: 5rem;
-}
-.desktopMenu{
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-weight: 400;
-    font-size: 1.5rem;
-}
-.desktopMenulistItem {
-    margin: 1rem;
-    cursor: pointer;
-
+    object-fit: contain;
+    height: 6rem;
+    width: auto;
 }
 
-.desktopMenulistItem:hover {
-    color: purple;
-    padding-bottom: 0.5rem;
-    border-bottom: 3px solid yellow;
-}
-.desktopMenuBtn{
-    background: white;
-    color: black;
-    border: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0 1rem;
-    border-radius: 2rem;
-    font-weight: 300;
-    font-size: 1.5rem;
-}
-.desktopMenuimg {
-    object-fit: cover;
-    height: 1rem;
-    width: 1rem;
-    margin: 1rem;
-}
-.active {
-    color: yellow;
-    padding-bottom: 0.5rem;
-    border-bottom: 3px solid yellow;
-}
-.mobMenu {
-    display: none;
-    object-fit: cover;
-    height: 1.8rem;
-}
-.navMenu {
-    position: absolute;
-    top: 4rem;
-    right: 2rem;
-    z-index: 2;
-    display: flex;
-    flex-direction: column;
-    padding: 0.5rem;
-    height: fit-content;
-    min-width: 15rem;
-    background: rgb(40, 40, 40);
-    border-radius: 1rem;
-}
-.listItem{
-    color: white;
-    padding: 0.5rem 3rem;
-    margin: 0.25rem;
-    background: rgb(30, 30, 30);
-}
-@media screen and (max-width:720px) {
-    .mobMenu{
-        display: flex;
+@media screen and (max-width: 720px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
     }
-    .desktopMenu {
-        display: none;
+    .nav-menu {
+        flex-direction: column;
+        gap: 20px;
+        align-items: flex-start;
     }
-    .desktopMenuBtn{
-        display: none;
+    .nav-connect {
+        margin-top: 1rem;
     }
-    
 }

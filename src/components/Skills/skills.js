@@ -1,46 +1,54 @@
-import React from 'react'
+import React from 'react';
+import Skills from './skills_icon';
 import './skills.css';
-import UIDesign from '../../assets/ui-design.png';
-import WebDesign from '../../assets/website-design.png';
-import AppDesign from '../../assets/app-design.png';
 
-const Skills = () => {
+const Experience = () => {
   return (
-    <section id='skills'>
-        <span className='skillTitle'>What I do</span>
-        <span className='skillDesc'>I'm Olufunmilayo, a skilled and
-              creative web developer with a passion for creating beautiful,
-              responsive, and user-friendly websites. I've worked on a variety of
-              web projects, ranging from personal blogs to e-commerce platforms.
-        </span>
-        <div className='skillsBars'>
-           <div className='skillBar'>
-            <img src={UIDesign} alt='UIDesign' className='skillBarImg'></img>
-            <div className='skillBarText'>
-                <h2>UI/UX Design</h2>
-                <p>This is a demo text, you can write your content here</p>
-            </div>
-           </div>
+    <section id="skills">
+      <h2>Skills</h2>
 
-           <div className='skillBar'>
-            <img src={WebDesign} alt='WebDesign' className='skillBarImg'></img>
-            <div className='skillBarText'>
-                <h2>Web Design</h2>
-                <p>This is a demo text, you can write your content here</p>
-            </div>
-           </div>
-
-           <div className='skillBar'>
-            <img src={AppDesign} alt='AppDesign' className='skillBarImg'></img>
-            <div className='skillBarText'>
-                <h2>APP Design</h2>
-                <p>This is a demo text, you can write your content here</p>
-            </div>
-           </div>
+      <div className="container experience__container">
+        <div className="experience__frontend">
+          <h3>Front-end Development</h3>
+          <div className="experience__content">
+            <Skills skill="Html5"/>
+            <Skills skill="CSS3"/>
+            <Skills skill="JavaScript"/>
+            <Skills skill="React"/>
+            <Skills skill="ReduxVite"/>
+            <Skills skill="Bootstrap"/>
+            <Skills skill="Next.js"/>
+            <Skills skill="TailWInd"/>
+          </div>
         </div>
-        
+
+        <div className="experience__backend">
+          <h3>Back-end Development</h3>
+          <div className="experience__content">
+            <Skills skill="SQL/MySQL"/>
+            <Skills skill="MongoDB"/>
+            <Skills skill="Node.js"/>
+            <Skills skill="Python-Django"/>
+            <Skills skill="ExpressDB"/>
+          </div>
+        </div>
+
+        <div className="experience__backend">
+          <h3>Others</h3>
+          <div className="experience__content">
+            <Skills skill="Python"/>
+            <Skills skill="Linux/Bash"/>
+            <Skills skill="Graphics Design"/>
+            <Skills skill="Tailoring"/>
+            <Skills skill="Git/Github"/>
+            <Skills skill="General IT skills"/>
+          
+          </div>
+        </div>
+      </div>
+
     </section>
   )
 }
 
-export default Skills
+export default Experience

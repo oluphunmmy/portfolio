@@ -1,65 +1,68 @@
-#skills {
-    overflow: hidden;
-    width: 100vw;
-    max-width: 65rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto;
-    text-align: center;
-}
-.skillTitle{
-    font-size: 3rem;
-    font-weight: 600;
-    padding-top: 3rem;
-    margin-bottom: 1.5rem;
+.experience__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
 }
 
-.skillDesc{
-    font-weight: 400;
-    font-size: 1.5rem;
-    max-width: 51rem;
-    padding: 0 2rem;
+.experience__container > div {
+    background: var(--color-bg-variant);
+    padding: 2.4rem 5rem;
+    border-radius: 2rem;
+    border: 1px solid transparent;
+    transition: var(--transition);
 }
-.skillBars{
-    margin: 1.5rem;
-    width: 100vw;
-    max-width: 80%;
-    text-align: left;
+
+.experience__container > div:hover {
+    background: transparent;
+    border-color: var(--color-primary-variant);
+    cursor: default;
 }
-.skillBar{
+
+.experience__container > div h3 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--color-primary);
+}
+
+.experience__content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 2rem;
+}
+
+.experience__details {
     display: flex;
-    margin: 1rem;
-    padding: 1.5rem 2rem;
-    border-radius: 0.5rem;
-    background: rgb(50, 50, 50);
+    gap: 1rem;
 }
-.skillBarImg{
-    object-fit: cover;
-    height: 3rem;
-    width: 3rem;
-    margin-right: 2rem;
+
+.experience__details-icon {
+    margin-top: 6px;
+    color: var(--color-primary);
 }
-.skillBarText>p{
-    font-size: 1rem;
-    font-weight: 200;
-}
-@media screen and (max-width:720px) {
-    .skillBarText>p{
-        font-size: 2vw;
+
+@media screen and (max-width: 1024px){
+    .experience__container {
+        grid-template-columns: 1fr;
+    }
+
+    .experience__container > div {
+        width: 80%;
+        margin: 0 auto;
+        padding: 2rem;
+    }
+
+    .experience__content p {
+        padding: 1rem;
     }
 }
-@media screen and (max-width:480px) {
-    .skillBarText>p{
-        font-size: 3vw;
+  
+@media screen and (max-width: 600px){
+    .experience__container {
+        gap: 1rem;
+    }
+
+    .experience__container > div {
+        width: 100%;
+        padding: 2rem 1rem;
     }
 }
-.skillBarImg {
-    height: 2.25rem;
-    width: 2.25rem;
-}
-.skillBarText>h2{
-font-size: 5vw;
-}
-    

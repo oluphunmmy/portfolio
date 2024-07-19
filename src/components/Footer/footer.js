@@ -1,10 +1,25 @@
 import React from 'react'
 import './footer.css';
+import { BsLinkedin } from 'react-icons/bs';
+import { FaGithub } from 'react-icons/fa';
+import { FaAngellist } from 'react-icons/fa'
 
 const Footer = () => {
+
+  let getYear = () => {
+    let currentYear = new Date().getFullYear();
+    return currentYear;
+  };
   return (
     <footer className='footer'>
-        Copyright &#169; 2024 Olufunmilayo Busari. All right reserved.
+       <div className="footer__socials">
+      <a href="https://www.linkedin.com/in/oluphunmmy/" target="_blank" rel="noreferrer" ><BsLinkedin /></a>
+      <a href="https://github.com/oluphunmmy" target="_blank" rel="noreferrer" ><FaGithub /></a>
+      <a href="https://wellfound.com/u/mishak-manuel" target="_blank" rel="noreferrer" ><FaAngellist /></a>
+      </div>
+      <div className="footer__copyright">
+        <small>&copy; Oluphunmmy {getYear()}. All rights reserved.</small>
+      </div>
     </footer>
   )
 }
