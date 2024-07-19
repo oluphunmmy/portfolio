@@ -60,7 +60,7 @@ const [message, setMessage] = useState(false);
 
         </div>
         <div id='contact'>
-            <h1 className='contactPageTitle'>Contact Me</h1>
+            <h2 className='contactPageTitle'>Contact Me</h2>
             <span className='contactDesc'>Please fill out the form below to discuss any work opportunity</span>
             <form className='contactForm' ref={form} onSubmit={sendEmail} >
                 <input type='text' className='name' placeholder='Your Name' name='your_name'/>
