@@ -23,7 +23,7 @@ const Portfolio = () => {
       description:
         'A responsive school Web App built using  React, Tailwind and Css',
       technologies: 'React | CSS',
-      link: 'https://educity-webapp.netlify.app/',
+      link: 'https://edusitywebapp.vercel.app/',
       github: 'https://github.com/oluphunmmy/frontend--univelcity-',
     },
     {
