@@ -38,12 +38,13 @@
     transform: translateX(-50%);
     width: 100%; /* Ensure it covers the width of the text */
 }
-.nav-menu  li img {
+
+.nav-menu li img {
     display: flex;
     margin: auto;
 }
 
-.anchor-link{
+.anchor-link {
     text-decoration: none;
     color: white;
 }
@@ -67,6 +68,9 @@
     height: 6rem;
     width: auto;
 }
+.menu-icon{
+    display: none;
+}
 
 @media screen and (max-width: 720px) {
     .navbar {
@@ -77,8 +81,21 @@
         flex-direction: column;
         gap: 20px;
         align-items: flex-start;
+        display: none; /* Hide the nav menu by default on mobile screens */
+    }
+    .show-mobile-menu {
+        display: flex; /* Show the nav menu when the menu is toggled */
+    }
+    .menu-icon {
+        display: block;
+        cursor: pointer;
     }
     .nav-connect {
-        margin-top: 1rem;
+        /* margin-top: 1rem; */
+        display: none;
     }
+}
+
+.menu-icon {
+    display: none; /* Hide by default and show only on mobile screens */
 }

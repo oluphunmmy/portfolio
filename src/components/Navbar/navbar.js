@@ -1,17 +1,24 @@
 import React, { useState } from 'react';
 import './navbar.css';
 import logo from '../../assets/logo.png';
+import menu_icon from '../../assets/menu-icon.png'; // Add your menu icon
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 import underline from '../../assets/nav_underline.svg';
 
 const Navbar = () => {
     const [menu, setMenu] = useState("home");
+    const [mobileMenu, setMobileMenu] = useState(false);
+
+    const toggleMenu = () => {
+        setMobileMenu(!mobileMenu);
+    };
 
     return (
         <div className='navbar'>
-            <img src={logo} alt='Logo' className='logo'/>
-            <ul className='nav-menu'>
-                <li><AnchorLink className='anchor-link' href='#home'> <p onClick={() => setMenu('home')}>
+            <img src={logo} alt='Logo' className='logo' />
+
+            <ul className={`nav-menu ${mobileMenu ? 'show-mobile-menu' : 'hide-mobile-menu'}`}>
+                <li><AnchorLink className='anchor-link' href='#home'><p onClick={() => setMenu('home')}>
                     Home</p></AnchorLink>
                     {menu === 'home' && <img src={underline} alt='' />}
                 </li>
@@ -33,6 +40,7 @@ const Navbar = () => {
                 </li>
             </ul>
             <div className='nav-connect'><AnchorLink className='anchor-link' offset={355} href='#contact'>Connect With Me</AnchorLink></div>
+                        <img src={menu_icon} alt='Menu' className='menu-icon' onClick={toggleMenu} />
         </div>
     );
 }
