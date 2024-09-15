@@ -25,11 +25,12 @@ const Experience = () => {
         <div className="experience__backend">
           <h3>Back-end Development</h3>
           <div className="experience__content">
-            <Skills skill="SQL/MySQL"/>
-            <Skills skill="MongoDB"/>
             <Skills skill="Node.js"/>
             <Skills skill="Python-Django"/>
-            <Skills skill="ExpressDB"/>
+            <Skills skill="ExpressJS"/>
+            <Skills skill="SQL/MySQL"/>
+            <Skills skill="MongoDB"/>
+            <Skills skill="POSTGRESQL"/>
           </div>
         </div>
 

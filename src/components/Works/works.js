@@ -2,6 +2,7 @@ import React from 'react';
 import IMG1 from '../../assets/bookstore1.jpg';
 import IMG2 from '../../assets/Edusity.png';
 import IMG3 from '../../assets/Todo_list.png';
+import IMG4 from '../../assets/Fashion_blog.png';
 import './works.css';
 
 const Portfolio = () => {
@@ -26,14 +27,15 @@ const Portfolio = () => {
       link: 'https://edusitywebapp.vercel.app/',
       github: 'https://github.com/oluphunmmy/frontend--univelcity-',
     },
+    
     {
-      id: 3,
-      title: 'Todo-List App',
-      img: IMG3,
-      description: "A Todo-list App built using React, TailwindCss, NodeJs, Express and MongoDB.  It can be used by many registered users making use of their different login accounts",
+      id: 4,
+      title: 'Tailoring App',
+      img: IMG4,
+      description: "A Tailoring blog built using React & TailwindCss",
       technologies: 'ReactJs | Tailwind | NodeJs | Express Js |  MongoDB ',
-      link: 'https://single-user-todo.netlify.app/',
-      github: 'https://github.com/oluphunmmy/To-do_list',
+      link: 'https://oluphunmmy.github.io/my-alx-portfolio/',
+      github: 'https://github.com/oluphunmmy/my-alx-portfolio',
     }
   ];
 
