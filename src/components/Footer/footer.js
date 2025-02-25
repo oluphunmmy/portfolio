@@ -15,7 +15,7 @@ const Footer = () => {
        <div className="footer__socials">
       <a href="https://www.linkedin.com/in/oluphunmmy/" target="_blank" rel="noreferrer" ><BsLinkedin /></a>
       <a href="https://github.com/oluphunmmy" target="_blank" rel="noreferrer" ><FaGithub /></a>
-      <a href="https://wellfound.com/u/mishak-manuel" target="_blank" rel="noreferrer" ><FaAngellist /></a>
+      // <a href="https://wellfound.com/u/mishak-manuel" target="_blank" rel="noreferrer" ><FaAngellist /></a>
       </div>
       <div className="footer__copyright">
         <small>&copy; Oluphunmmy {getYear()}. All rights reserved.</small>
